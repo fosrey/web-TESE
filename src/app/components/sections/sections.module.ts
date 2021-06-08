@@ -3,10 +3,12 @@ import { CommonModule } from '@angular/common';
 
 import { HomeComponent } from './home/home.component';
 import { MaterialModule } from '../material/material.module';
+import { BecasComponent } from './admisionytramites/becas/becas.component';
 
 @NgModule({
   declarations: [
-    HomeComponent
+    HomeComponent,
+    BecasComponent
   ],
   imports: [
     CommonModule,
