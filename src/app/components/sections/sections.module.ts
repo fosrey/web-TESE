@@ -4,13 +4,15 @@ import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home/home.component';
 import { MaterialModule } from '../material/material.module';
 import { ServiciosocialComponent } from './admisionytramites/serviciosocial/serviciosocial.component';
+import { TitulacionComponent } from './admisionytramites/titulacion/titulacion.component';
 
 
 
 @NgModule({
   declarations: [
     HomeComponent,
-    ServiciosocialComponent
+    ServiciosocialComponent,
+    TitulacionComponent
 
 
   ],

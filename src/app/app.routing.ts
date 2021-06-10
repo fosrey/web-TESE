@@ -2,12 +2,14 @@
 import { ModuleWithProviders } from '@angular/core';
 import {Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './components/sections/home/home.component';
-import { ServiciosocialComponent } from './components/sections/admisionytramites/serviciosocial/serviciosocial.component'
+import { ServiciosocialComponent } from './components/sections/admisionytramites/serviciosocial/serviciosocial.component';
+import { TitulacionComponent } from './components/sections/admisionytramites/titulacion/titulacion.component';
 
 // Rutas
 const appRoutes: Routes = [
     { path: '', component: HomeComponent },
-    {path: 'serviciosocial',component: ServiciosocialComponent }
+    {path: 'serviciosocial',component: ServiciosocialComponent },
+    {path: 'titulacion',component: TitulacionComponent}
 
 
 ];
