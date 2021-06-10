@@ -3,10 +3,16 @@ import { CommonModule } from '@angular/common';
 
 import { HomeComponent } from './home/home.component';
 import { MaterialModule } from '../material/material.module';
+import { ServiciosocialComponent } from './admisionytramites/serviciosocial/serviciosocial.component';
+
+
 
 @NgModule({
   declarations: [
-    HomeComponent
+    HomeComponent,
+    ServiciosocialComponent
+
+
   ],
   imports: [
     CommonModule,
