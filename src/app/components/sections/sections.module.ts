@@ -9,17 +9,19 @@ import { TitulacionComponent } from './admisiontramites/titulacion/titulacion.co
 import { AdmisiontramitesComponent } from './admisiontramites/admisiontramites.component';
 
 import { InscripcionComponent } from './admisionytramites/inscripcion/inscripcion.component';
+import { ReinscripcionComponent } from './admisionytramites/reinscripcion/reinscripcion.component';
 
 
 @NgModule({
   declarations: [
-    HomeComponent,
       HomeComponent,
    BecasComponent,
     ServiciosocialComponent,
     TitulacionComponent,
     AdmisiontramitesComponent,
-InscripcionComponent
+InscripcionComponent,
+ReinscripcionComponent
+
 
 
 
