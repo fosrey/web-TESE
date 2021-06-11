@@ -4,11 +4,13 @@ import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home/home.component';
 import { MaterialModule } from '../material/material.module';
 import { InscripcionComponent } from './admisionytramites/inscripcion/inscripcion.component';
+import { ReinscripcionComponent } from './admisionytramites/reinscripcion/reinscripcion.component';
 
 @NgModule({
   declarations: [
     HomeComponent,
-    InscripcionComponent
+    InscripcionComponent,
+    ReinscripcionComponent
   ],
   imports: [
     CommonModule,
