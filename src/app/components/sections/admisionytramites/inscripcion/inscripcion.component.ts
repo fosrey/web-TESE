@@ -25,3 +25,4 @@ export class InscripcionComponent implements OnInit {
     l.classList.toggle('open');
   }
 }
+
