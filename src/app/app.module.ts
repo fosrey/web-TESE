@@ -9,9 +9,10 @@ import { MaterialModule } from './components/material/material.module';
 import { LayoutModule } from './components/layout/layout.module';
 import { SectionsModule } from './components/sections/sections.module';
 
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
