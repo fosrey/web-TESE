@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 import { HomeComponent } from './home/home.component';
 import { MaterialModule } from '../material/material.module';
-import { ServiciosocialComponent } from './admisionytramites/serviciosocial/serviciosocial.component';
-import { TitulacionComponent } from './admisionytramites/titulacion/titulacion.component';
+import { ServiciosocialComponent } from './admisiontramites/serviciosocial/serviciosocial.component';
+import { TitulacionComponent } from './admisiontramites/titulacion/titulacion.component';
+import { AdmisiontramitesComponent } from './admisiontramites/admisiontramites.component';
+
 
 
 
@@ -12,7 +13,9 @@ import { TitulacionComponent } from './admisionytramites/titulacion/titulacion.c
   declarations: [
     HomeComponent,
     ServiciosocialComponent,
-    TitulacionComponent
+    TitulacionComponent,
+    AdmisiontramitesComponent
+
 
 
   ],
