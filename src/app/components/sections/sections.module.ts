@@ -5,12 +5,14 @@ import { HomeComponent } from './home/home.component';
 import { MaterialModule } from '../material/material.module';
 import { InscripcionComponent } from './admisionytramites/inscripcion/inscripcion.component';
 import { ReinscripcionComponent } from './admisionytramites/reinscripcion/reinscripcion.component';
+import { ProcesodeadmisionComponent } from './admisionytramites/procesodeadmision/procesodeadmision.component';
 
 @NgModule({
   declarations: [
     HomeComponent,
     InscripcionComponent,
-    ReinscripcionComponent
+    ReinscripcionComponent,
+    ProcesodeadmisionComponent
   ],
   imports: [
     CommonModule,
