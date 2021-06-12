@@ -1,34 +1,58 @@
+
+/* Cuerpo de Pagina */
+
+
+.titulo{
+  text-align: center;
+
+  padding: 10px;
+  font-family: sans-serif;
+  padding: 10px;
+  font-size: 6ch;
+  font-weight: bold;
+  color:rgb(71, 71, 71);
+  line-height: 1.5ch;
+}
 .center{
   text-align: center;
-  font-weight: bold;
 
-}
-
-
-.justificar{
-  text-align: justify;
-  margin: 5ch;
-  padding: 10px;
-  display: flex;
-  font-size: 3ch;
-  line-height: 3ch;
-}
-.img-icon{
-  width: 8ch;
-  height: 10ch;
-
-}
-.enlace-pdf{
-  color:white;
-  display: flex;
-  font-size: 3ch;
-  padding: 10px;
-  text-align: left;
-
+  font-style: italic;
+ font-size: 4ch;
+ color:#272727;
+ font-family:serif
 }
 
 hr.new1 {
-  border-top: 10px solid rgb(139, 4, 4);
+  border-top: 15px solid #5a5a5a;
+}
+
+.w3-black,.w3-hover-black:hover{color:#515151!important;background-color:#515151!important}
+
+
+
+
+/* Contenido cards */
+
+.card-text{
+text-align: justify;
+font-family:Verdana, Geneva, Tahoma, sans-serif;
+font-size:13pt;
+color:rgb(36, 36, 36);
+
+
+}
+.card-title{
+  text-align: center;
+  font-weight: bold;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-size:13pt;
+}
+
+/* Imagenes responsivas */
+
+.responsive {
+  width: auto;
+  height: auto;
 }
 
 
