@@ -1,8 +1,11 @@
 
 # VARIABLES
-# LMAC = LISTA DE DISPOSITIVOS,  RMC = VARIABLE ESTADO ON OFF, PACT = PERIODO DE ACTUALIZACION
+# LMAC = LISTA DE DISPOSITIVOS,  RMC = VARIABLE ESTADO ON OFF, PACT = PERIODO DE ACTUALIZACION, LOMAC ES LISTA DE DISPOSITIVOS
 
 ##
+from typing import List
+
+
 ALERT = []
 
 ###----------ESTADO 0-----------
@@ -21,16 +24,13 @@ RMC = config.readline()
 PACT = config.readline()
 
 config.close()
+LOMAC = list(LMAC.split(','))
 
-print(LMAC,RMC,PACT)
-
-T = len(disp)
-
-print(T)
+print(LOMAC[0])
 
 if len(disp) == TF:
 
-    if disp in LMAC:
+    if disp in LOMAC:
 
         print("EL DISPOSITIVO", disp, "EXISTE EN LA CONFIGURACION")
     else:
@@ -42,6 +42,8 @@ else:
     print("LA DIRECCION MAC NO VALIDA")
 
 print(ALERT)
+
+
 
 ##-----------TERMINACION DE ESTADO 0------------
 
