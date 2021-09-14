@@ -17,6 +17,7 @@ PACT = 0
 TF = 12
 
 
+
 config = open('config.txt','r')
 
 LMAC = config.readline()
@@ -25,8 +26,6 @@ PACT = config.readline()
 
 config.close()
 LOMAC = list(LMAC.split(','))
-
-print(LOMAC[0])
 
 if len(disp) == TF:
 
