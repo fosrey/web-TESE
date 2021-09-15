@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="85486846-73d3-418f-8379-1369d2cb623f" name="Changes" comment="" />
+    <list default="true" id="85486846-73d3-418f-8379-1369d2cb623f" name="Changes" comment="COMMIT CON PYCHARM">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,6 +16,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/config.txt" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -25,6 +30,8 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="settings.space" />
   </component>
   <component name="ReaderModeSettings">
     <option name="enabled" value="false" />
@@ -92,6 +99,29 @@
       <option name="presentableId" value="Default" />
       <updated>1631651884883</updated>
     </task>
+    <task id="LOCAL-00001" summary="COMMIT CON PYCHARM">
+      <created>1631658410239</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1631658410241</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="COMMIT CON PYCHARM" />
+    <option name="LAST_COMMIT_MESSAGE" value="COMMIT CON PYCHARM" />
   </component>
 </project>
