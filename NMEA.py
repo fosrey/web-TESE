@@ -10,6 +10,7 @@ ALERT = []
 
 RUN = input("ENCEDER O APAGAR ON / OFF")
 
+
 config = open('config.txt','r')
 
 LMAC = config.readline()
@@ -17,8 +18,16 @@ RMCE = config.readline()
 IACT = config.readline()
 
 config.close()
+<<<<<<< HEAD
 
 LOMAC = list(LMAC.split(','))
+=======
+LOMAC = list(LMAC.split(','))
+
+if len(disp) == TF:
+
+    if disp in LOMAC:
+>>>>>>> ef24111768413e1cbbf6f48152bc6034236b92a2
 
 print(LOMAC)
 
