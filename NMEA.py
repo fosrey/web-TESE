@@ -2,10 +2,7 @@ from typing import List
 # ------ Menu
 
 #Variable menu principal sirve para elegir una opcion, dos opciones, seguir el proceso o terminarlo, si se introduce cualquier otra cosa diferente dira entrada invalida.
-menuprincipal = int(input("""==========
-Menu
-==========
-\n 1- Seguir Proceso    \n 0- Cerrar   """))
+
 
 
 
@@ -16,8 +13,8 @@ Menu
 
 ##
 
-while menuprincipal !=0:
-    if menuprincipal == 1:
+while 1>0:
+    
         print("Iniciando proceso...")
         ALERT = []
 
@@ -58,10 +55,7 @@ while menuprincipal !=0:
                 ALERT.append(" E 0 DN ")
                 print("EL DISPOSITIVO", disp, "NO EXISTE EN LA CONFIGURACION")
 
-                menuprincipal = int(input("""==========
-Menu
-==========
-\n 1- Seguir Proceso    \n 0- Cerrar   """))
+               
 
         else:
 
@@ -79,10 +73,8 @@ Menu
 
 
 
-        menuprincipal = int(input("""==========
-Menu
-==========
-\n 1- Seguir Proceso    \n 0- Cerrar   """))
+      
+
 
 
 
@@ -103,16 +95,3 @@ Menu
 
 
 #Finalizacion de menu, opcion de cerrado y comparacion de opciones
-
-    elif menuprincipal == 0:
-        print("Bye")
-        exit()
-
-    elif menuprincipal != 1 or 2:
-        print("""=========
-ELIGE UNA OPCION VALIDA
-=========""")
-        menuprincipal = int(input("""==========
-Menu
-==========
-\n 1- Seguir Proceso    \n 0- Cerrar   """))
