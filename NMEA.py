@@ -1,149 +1,217 @@
 
-
-
 from typing import List
 import csv
+import time
 
-RUN = False
+RUN = True
 LONGD = 12
 ALERT = []
+RMCT = "True"
+RMCV = "A"
+ESTATUSF = []
 
-RUN = input("ENCEDER O APAGAR ON / OFF")
+while RUN == True:
 
+    config = open('config.txt', 'r')
 
-config = open('config.txt','r')
+    LMAC = config.readline()
+    RMCE = config.readline()
+    IACT = int(config.readline())
+    config.close()
 
-LMAC = config.readline()
-RMCE = config.readline()
-IACT = config.readline()
+    time.sleep(IACT)
 
-config.close()
-<<<<<<< HEAD
-
-LOMAC = list(LMAC.split(','))
-=======
-LOMAC = list(LMAC.split(','))
-
-if len(disp) == TF:
-
-    if disp in LOMAC:
->>>>>>> ef24111768413e1cbbf6f48152bc6034236b92a2
-
-print(LOMAC)
+    LOMAC = list(LMAC.split(','))
 
 
-##while RUN in "ON":
-    
-    
-class Estat0:
-        
     DISP = False
-             
     NDISPBL = ""
     DDISPBL = ""
-            
-BLUET = Estat0()
-
-print("ESTADO CERO")
-
-while BLUET.DISP == False:
-        
-    BLUET.NDISPBL = str(input("Nombre del dispositivo"))
-    BLUET.DDISPBL = str(input("Direccion MAC"))
-        
-    if len(BLUET.DDISPBL) == LONGD:
-        
-        if BLUET.DDISPBL in LOMAC:
-            BLUET.DISP = True
-            print("El dispositivo existe en la configuracion")
-        else:
-            ALERT.append("E 0 DN")
-            print("El dispositivo no existe en la configuracion")
-    else:
-        ALERT.append("E 0 DM")
-        print("Error en la MAC")
-   
-print(ALERT)   
 
 
 
-class Estat100:
-    
-    
-    ESTATGGA = False
-    LGGA = []
-    IDGGA = ""
-    UTC = ""
-    LAT = ""
-    DIRLAT = ""
-    LONGI = ""
-    DIRLONGI = ""
-    FIX = 0
-    SAT = 0
-    HDOP = ""
-    ALT = 0
-    ALTORT = 0
-    ALTUM = 0
-    SEPGEO = ""
-    SEPGEOM = ""
-    ANTREGD = ""
-    REFESTID = ""
 
-GGA = Estat100()
+    print("ESTADO CERO")
 
-print("ESTADO 100")
+    while DISP == False:
 
-if BLUET.DISP == True:
-    
-    while GGA.ESTATGGA == False :
-        
-        gga = open('GGA.txt','r')
+        NDISPBL = str(input("Nombre del dispositivo"))
+        DDISPBL = str(input("Direccion MAC"))
 
-        GGA.LGGA = list(gga.read().split(','))
-        
-        GGA.IDGGA = GGA.LGGA[0]
-        GGA.UTC = GGA.LGGA[1]
-        GGA.LAT = GGA.LGGA[2]
-        GGA.DIRLAT = GGA.LGGA[3]
-        GGA.LONGI = GGA.LGGA[4]
-        GGA.DIRLONGI = GGA.LGGA[5]
-        GGA.FIX = int(GGA.LGGA[6])
-        GGA.SAT = int(GGA.LGGA[7])
-        GGA.HDOP = GGA.LGGA[8]
-        GGA.ALT = GGA.LGGA[9]
-        GGA.ALTORT = GGA.LGGA[10]
-        GGA.SEPGEO = GGA.LGGA[11]
-        GGA.SEPGEOM = GGA.LGGA[12]
-        GGA.ANTREGD = GGA.LGGA[13]
-        GGA.REFESTID = GGA.LGGA[14]
-        gga.close()
-        
-        if GGA.FIX > 0 :
-            
-            if GGA.SAT > 3:
-                
-                GGA.ESTATGGA = True
-                print("SATELITES MAYORES A 3","CON UNA SENAL FIX DE:",GGA.FIX)
+        if len(DDISPBL) == LONGD:
+
+            if DDISPBL in LOMAC:
+                DISP = True
+                print("El dispositivo existe en la configuracion")
+                ESTATUSF.append(NDISPBL)
+                ESTATUSF.append(IACT)
             else:
-                GGA.ESTATGGA = True
-                ALERT.append("E 100 SAT")
-                print("sin señal")
+                ALERT.append("E 0 ACCESO DENEGADO")
+                print("El dispositivo no existe en la configuracion")
         else:
-               
-            print("FIX NO VALIDO")
+            ALERT.append("E 0 ERROR EN LA MAC")
+            print("Error en la MAC")
+
+
+
+
+        ESTATGGA = False
+        LGGA = []
+        IDGGA = ""
+        UTC = ""
+        LAT = ""
+        DIRLAT = ""
+        LONGI = ""
+        DIRLONGI = ""
+        FIX = 0
+        SAT = 0
+        HDOP = ""
+        ALT = 0
+        ALTORT = 0
+        ALTUM = 0
+        SEPGEO = ""
+        SEPGEOM = ""
+        ANTREGD = ""
+        REFESTID = ""
+
+
+
+
+    print("ESTADO 100")
+
+    if DISP == True:
+
+        while ESTATGGA == False:
+
+            gga = open('GGA.txt', 'r')
+
+            LGGA = list(gga.read().split(','))
+
+            FIX = int(LGGA[6])
+            SAT = int(LGGA[7])
+            time.sleep(0.5)
+            gga.close()
+
+            if FIX > 0:
+
+                gga = open('GGA.txt', 'r')
+
+                LGGA = list(gga.read().split(','))
+
+                IDGGA = LGGA[0]
+                UTC = LGGA[1]
+                LAT = LGGA[2]
+                DIRLAT = LGGA[3]
+                LONGI = LGGA[4]
+                DIRLONGI = LGGA[5]
+                HDOP = LGGA[8]
+                ALT = LGGA[9]
+                ALTORT = LGGA[10]
+                SEPGEO = LGGA[11]
+                SEPGEOM = LGGA[12]
+                ANTREGD = LGGA[13]
+                REFESTID = LGGA[14]
+
+                gga.close()
+
+                if SAT > 3:
+
+                    ESTATGGA = True
+                    print("SATELITES MAYORES A :", SAT,
+                        "CON UNA SENAL FIX DE:", FIX)
+                else:
+                    ESTATGGA = True
+                    ALERT.append("E 100 POCOS SATELITES")
+                    print("señal debil de :", SAT)
+                    print("VALOR DE FIX", FIX)
+            else:
+
+                ALERT.append("E 100 FIX NO VALIDO")
+                print("FIX NO VALIDO")
+        else:
+
+            print("ELEMENTOS GUARDADOS DE GGA", LGGA)
     else:
-        
-        print("ELEMENTOS GUARDADOS",GGA.LGGA)
+
+        print("TU QUE HACES AQUI?")
+
+#ESTADO 110
+
+
+        LRMC = []
+        LEER = ""
+        VELOCIDAD = 0
+        RUMBO = ""
+        DESVMAG = ""
+
+
+
+
+    if RMCT in RMCE:
+
+        ESTATUSF.append(RMCE)
+        print("ENTRANDO A RMC")
+
+        rmc = open('RMC.txt', 'r')
+        LRMC = list(rmc.read().split(','))
+
+        rmc.close()
+
+        LEER = LRMC[2]
+
+        if LEER in RMCV:
+            rmc = open('RMC.txt', 'r')
+
+            VELOCIDAD = LRMC[7]
+            RUMBO = LRMC[8]
+            DESVMAG = LRMC[10:11]
+            rmc.close()
+            print("ELEMENTO GUARDADOS DE RMC", LRMC)
+
+        else:
+            ALERT.append(" E 110 RMC NO DETECTECTADO")
+
+
+    else:
+        print("RMC DESACTIVADO DESDE CONFIGURACION")
+
+    print(ALERT)
+
+
+
+
+    LPAM = []
+
+
+
+
+    print("ALAMRAS DETECTADAS :", ALERT)
+
+    print("ESTATUS :", ESTATUSF)
+
+    LPAM = LGGA + LRMC
+
+
+    print("PAM ", LPAM)
+
+
+
+
+    CODOFF = ""
+
+
+
+
+    CODOFF = input("APAGAR SI / NO")
+
+    if CODOFF == "SI":
+
+        RUN = False
+
+    if CODOFF == "NO":
+
+        RUN = True
+
+
 else:
-    
-    print("TU QUE HACES AQUI?")        
-    
-class Estat110:
-    
-    
-    
-    
-##else:
-   ## print("DISPOSITIVO APAGADO")
-
-
+    print("DISPOSITIVO APAGADO")
